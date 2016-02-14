@@ -1,6 +1,7 @@
 
 from .transition import TransitionTable
-from .exceptions import DeadState
+from .exceptions import DeadState, InvalidTransition
+import sys
 
 class DFA(object):
 
@@ -29,16 +30,19 @@ class DFA(object):
 
         accepted = True
 
-        for s in string:
-            try:
+        try:
+            for s in string:
                 self.current_state = self.trans_table.consume(s, self.current_state)
 
-            except DeadState, InvalidTransition:
-                return False
+            if not self.current_state == self.trans_table.final_state:
+                accepted = False
 
-        if not self.current_state == self.trans_table.final_state:
+        except DeadState:
+            accepted =  False
+
+        except InvalidTransition:
             accepted = False
-        
+
         self.current_state = self.trans_table.start_state
 
         return accepted
