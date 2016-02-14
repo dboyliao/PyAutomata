@@ -23,6 +23,11 @@ else:
     print "'bba' is not accepted."
 ```
 
+## Install
+
+- run `make install` to install dependencies for this package.
+- see `requirements.txt` for required packages.
+
 ## Test
 
 1. run `make test` to run the tests.
