@@ -1,5 +1,5 @@
-from autamata.dfa import DFA
-from autamata.transition import TransitionTable
+from automata.dfa import DFA
+from automata.transition import TransitionTable
 
 def test_set_new_transtable():
 

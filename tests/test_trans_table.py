@@ -1,5 +1,5 @@
-from autamata.transition import TransitionTable
-from autamata.exceptions import DeadState, InvalidTransition
+from automata.transition import TransitionTable
+from automata.exceptions import DeadState, InvalidTransition
 import sys
 
 def get_table(alphabet, states):

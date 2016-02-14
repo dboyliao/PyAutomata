@@ -87,7 +87,7 @@ class TransitionTable(object):
     def __str__(self):
 
         format = "(input:{}, current state:{}) --> {}\n"
-        ret_string = ""
+        ret_string = "alphabet: {}\nstates: {}\n".format(self.alphabet, self.states)
 
         for (input_symbol, current_state), output_state in self.rules.items():
 
