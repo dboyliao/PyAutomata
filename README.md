@@ -1,4 +1,4 @@
-# `automata` -- A Simple Python Package to Play with Automata
+## `automata` - A Simple Python Package for Playing with Automata
 
 ## Deterministic Finite Automata
 
