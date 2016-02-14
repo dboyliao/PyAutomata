@@ -31,4 +31,5 @@ else:
 ## Test
 
 1. run `make test` to run the tests.
+    - run `make install` first to install the packages required for testing. 
 2. see the result of the tests in `tests/reports/index.html`.
